@@ -24,3 +24,12 @@ console.log(`My Cloud Function: ${name}`);
 };
 
 --------------------------------------------------------------------------------------------------------------
+
+export BUCKET_NAME=
+
+
+gsutil mb -p $BUCKET_NAME gs://$BUCKET_NAME
+gcloud functions deploy helloWorld \
+  --stage-bucket $BUCKET_NAME \
+  --trigger-topic hello_world \
+  --runtime nodejs20
